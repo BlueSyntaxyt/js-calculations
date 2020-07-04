@@ -1,0 +1,21 @@
+JS-Calculations
+---------------
+
+- This package makes it easy to integrate checks and calculations, you can check if A == B and then put a variable to true or false. Example:
+
+var MyNum = 10;
+var MyBool = calculations.Check(1, MyNum);
+
+console.log(MyBool);
+
+//This would log false, since 1 is not equal to 10.
+
+Example 2:
+
+var Answer = 0;
+var NumOne = "4";
+var NumTwo = 1;
+IS = calculations.Maths(A, B, "+=");
+console.log(IS);
+
+//This would return 5.
