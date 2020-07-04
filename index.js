@@ -2,6 +2,11 @@ exports.Check = function (first, second) {
     var bool = false;
     if (!first) throw new Error("Missing first argument");
     if (!second) throw new Error("Missing second argument");
+    if (!typeof second === "float") {
+        if (!typeof second === "int") {
+            throw new Error("Second argument is not a float or int");
+        }
+    }
     if (first == second) {
         bool = true;
     } else {
