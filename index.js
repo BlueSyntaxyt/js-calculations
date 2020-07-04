@@ -65,3 +65,40 @@ exports.Calc = function (first, second, way) {
     }
     return third;
 }
+exports.Maths = function (First, Second, way) {
+    var third = false;
+    if (!First) throw new Error("Missing first argument");
+    if (!Second) throw new Error("Missing second argument");
+    if (!way) throw new Error("Missing instructions on how to calculate. (third argument)");
+    if (!typeof First === "float") {
+        if (!typeof First === "int") {
+            throw new Error("First argument is not a float or int");
+        }
+    }
+    if (!typeof Second === "float") {
+        if (!typeof Second === "int") {
+            throw new Error("Second argument is not a float or int");
+        }
+    }
+    if (!typeof way === "string") throw new Error("Third argument is not a string");
+    var first = First;
+    var second = Second;
+    if (way == "+=") {
+        third = first += second;
+    } else {
+        if (way == "-=") {
+            third = first -= second;
+        } else {
+            if (way == "/") {
+                third = first / second;
+            } else {
+                if (way == "*") {
+                    third = first * second;
+                } else {
+                    throw new Error("Third argument is not a valid calculation identifier");
+                }
+            }
+        }
+    }
+    return third;
+}
