@@ -19,15 +19,23 @@ exports.Calc = function (first, second, way) {
     if (!first) throw new Error("Missing first argument");
     if (!second) throw new Error("Missing second argument");
     if (!way) throw new Error("Missing instructions on how to calculate. (third argument)");
-    if (!typeof first === "float") {
-        if (!typeof first === "int") {
-            throw new Error("First argument is not a float or int");
-        }
+    if (typeof first === "string") {
+        throw new Error("First argument is not a float");
     }
-    if (!typeof second === "float") {
-        if (!typeof second === "int") {
-            throw new Error("Second argument is not a float or int");
-        }
+    if (typeof second === "string") {
+        throw new Error("Second argument is not a float");
+    }
+    if (typeof first === "boolean") {
+        throw new Error("First argument is not a float");
+    }
+    if (typeof second === "boolean") {
+        throw new Error("Second argument is not a float");
+    }
+    if (typeof first === "arry") {
+        throw new Error("First argument is not a float");
+    }
+    if (typeof second === "array") {
+        throw new Error("Second argument is not a float");
     }
     if (!typeof way === "string") throw new Error("Third argument is not a string");
     if (way == "==") {
@@ -70,15 +78,23 @@ exports.Maths = function (First, Second, way) {
     if (!First) throw new Error("Missing first argument");
     if (!Second) throw new Error("Missing second argument");
     if (!way) throw new Error("Missing instructions on how to calculate. (third argument)");
-    if (!typeof First === "float") {
-        if (!typeof First === "int") {
-            throw new Error("First argument is not a float or int");
-        }
+    if (typeof First === "string") {
+        throw new Error("First argument is not a float");
     }
-    if (!typeof Second === "float") {
-        if (!typeof Second === "int") {
-            throw new Error("Second argument is not a float or int");
-        }
+    if (typeof Second === "string") {
+        throw new Error("Second argument is not a float");
+    }
+    if (typeof First === "boolean") {
+        throw new Error("First argument is not a float");
+    }
+    if (typeof Second === "boolean") {
+        throw new Error("Second argument is not a float");
+    }
+    if (typeof First === "array") {
+        throw new Error("First argument is not a float");
+    }
+    if (typeof Second === "array") {
+        throw new Error("Second argument is not a float");
     }
     if (!typeof way === "string") throw new Error("Third argument is not a string");
     var first = First;
